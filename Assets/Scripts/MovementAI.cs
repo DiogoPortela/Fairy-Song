@@ -41,7 +41,7 @@ public class MovementAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Ai();
-        StartCoroutine(Bullet());
+        //StartCoroutine(Bullet());
     }
 
     void Shoot()
