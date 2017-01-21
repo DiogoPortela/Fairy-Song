@@ -452,8 +452,9 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudServicesEnabled:
+    UNet: 1
+  cloudProjectId: c2d7d9eb-2746-4178-aea9-9835a5072855
+  projectName: GameJam2017
+  organizationId: whisp99
   cloudEnabled: 0
