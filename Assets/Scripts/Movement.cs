@@ -35,9 +35,12 @@ public class Movement : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Tree")
+        if (collision.gameObject.tag.Equals( "Tree"))
         {
-            Debug.Log("Works");
+
+            if(this.GetComponent<Rigidbody2D>())
+                DestroyObject(this, 0);
+            Debug.Log("You Lost");
         }
     }
 }
