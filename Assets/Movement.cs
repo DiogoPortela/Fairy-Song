@@ -32,18 +32,14 @@ public class Movement : MonoBehaviour {
             r.Sleep();
         }
     }
-    
 
-    //Ainda nao funciona
-    void onCollisionEnter2D(Collision2D col)
+
+    void OnTriggerEnter(Collider a)
     {
-        if (col.gameObject.name == "Trees")
+        if (a.gameObject.name == "Player")
         {
-            
-            Destroy(col.gameObject);
+            Debug.Log("Works");
         }
     }
-
-    // Update is called once per frame
 
 }
