@@ -33,13 +33,11 @@ public class Movement : MonoBehaviour {
         }
     }
 
-
-    void OnTriggerEnter(Collider a)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (a.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Tree")
         {
             Debug.Log("Works");
         }
     }
-
 }
