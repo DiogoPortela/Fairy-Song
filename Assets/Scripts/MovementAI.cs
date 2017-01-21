@@ -13,8 +13,9 @@ public class MovementAI : MonoBehaviour {
 
     private int o;
 
+    private bool isRunning;
+
     private Rigidbody2D r;
-    private List<GameObject> bullets;
 
     void Start () {
         r = GetComponent<Rigidbody2D>();
@@ -41,7 +42,14 @@ public class MovementAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Ai();
-        //StartCoroutine(Bullet());
+
+        if (!isRunning)
+        {
+            StartCoroutine(Bullet());
+        }
+
+
+
     }
 
     void Shoot()
@@ -55,8 +63,9 @@ public class MovementAI : MonoBehaviour {
 
    IEnumerator Bullet()
     {
+        isRunning = true;
         Shoot();
         yield return new WaitForSecondsRealtime(3f);
-        
+        isRunning = false;
     }
 }
