@@ -31,10 +31,13 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Tree"))
+        if (collision.gameObject.tag.Equals("Tree") || collision.gameObject.tag.Equals("Bullet"))
         {
             DestroyObject(this.gameObject, 0);
             Debug.Log("You Lost");
         }
+
+
+        
     }
 }
