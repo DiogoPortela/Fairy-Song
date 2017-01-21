@@ -47,7 +47,7 @@ public class MovementAI : MonoBehaviour {
     void Shoot()
     {
         var onebullet = Instantiate(bullet);
-        Vector2 tmp = new Vector2(-11, 0);
+        Vector2 tmp = Vector2.left * speed;
         
         onebullet.GetComponent<Rigidbody2D>().transform.position = new Vector3(this.GetComponent<Rigidbody2D>().position.x, this.GetComponent<Rigidbody2D>().position.y, 1);
         onebullet.GetComponent<Rigidbody2D>().AddForce(tmp);
