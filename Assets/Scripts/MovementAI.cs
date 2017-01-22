@@ -9,9 +9,6 @@ public class MovementAI : MonoBehaviour {
     public float speed;
     public GameObject player;
     public GameObject bullet;
-    public int numBullets;
-
-    private int o;
 
     private bool isRunning;
 
