@@ -33,12 +33,9 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Tree") || collision.gameObject.tag.Equals("Bullet"))
+        if ( collision.gameObject.tag.Equals("Bullet") || collision.gameObject.tag.Equals("Dildo"))
         {
             manager.GetComponent<MenuManager>().CreateMenu();
-        }
-
-
-        
+        } 
     }
 }
