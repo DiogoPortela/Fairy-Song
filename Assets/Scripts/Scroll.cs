@@ -8,17 +8,12 @@ public class Scroll : MonoBehaviour {
     public float b3_speed;
     public float b4_speed;
 
+    public GameObject back2;
+    public GameObject back3;
+    public GameObject back4;
+
 	// Use this for initialization
 	void Start () {
-        Vector2 b2 = Vector2.left * b2_speed;
-        Vector2 b3 = Vector2.left * b2_speed;
-        Vector2 b4 = Vector2.left * b2_speed;
-
-        if (this.GetComponentInChildren<GameObject>().name.Equals("back_2"))
-        {
-            Debug.Log("OK");
-        }
-
 
     }
 

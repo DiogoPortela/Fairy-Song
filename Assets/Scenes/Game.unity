@@ -99,6 +99,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 109624828}
+  - component: {fileID: 109624829}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -123,6 +124,23 @@ Transform:
   m_Father: {fileID: 215067231}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &109624829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 109624827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f471ecea52b97d449768a42f131d51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  b2_speed: 100
+  b3_speed: 75
+  b4_speed: 50
+  back2: {fileID: 2022447021}
+  back3: {fileID: 137962931}
+  back4: {fileID: 1968053577}
 --- !u!1 &137962931
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,8 +150,6 @@ GameObject:
   m_Component:
   - component: {fileID: 137962932}
   - component: {fileID: 137962933}
-  - component: {fileID: 137962935}
-  - component: {fileID: 137962934}
   m_Layer: 0
   m_Name: back_3
   m_TagString: Untagged
@@ -189,38 +205,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!50 &137962934
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 137962931}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &137962935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 137962931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe0e2fd88591634a85d951c184a563c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  b3_speed: 50
 --- !u!1 &160333011
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,8 +960,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2022447023}
   - component: {fileID: 2022447022}
-  - component: {fileID: 2022447024}
-  - component: {fileID: 2022447025}
   m_Layer: 0
   m_Name: back_2
   m_TagString: Untagged
@@ -1033,38 +1015,6 @@ Transform:
   m_Father: {fileID: 109624828}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &2022447024
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2022447021}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &2022447025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2022447021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18357011b307d0f419342b4e2535585e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  b2_speed: 100
 --- !u!1 &2022876470
 GameObject:
   m_ObjectHideFlags: 0
