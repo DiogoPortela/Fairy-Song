@@ -9,12 +9,14 @@ public class Movement : MonoBehaviour
     public float speed;
     public float freq;
     public int threshold;
+    public GameObject manager;
 
     private SoundManager thisSoundManager;
     private Rigidbody2D thisRigidBody;
 
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("Finish");
         thisRigidBody = GetComponent<Rigidbody2D>();
         thisSoundManager = GameObject.Find("AudioManager").GetComponent<SoundManager>();
     }
@@ -24,7 +26,7 @@ public class Movement : MonoBehaviour
         freq = thisSoundManager.Frequencia;
         if (freq > threshold)
         {
-            Vector2 v = Vector2.up * speed * freq / 10f * Time.deltaTime;
+            Vector2 v = Vector2.up * speed * Time.deltaTime;
             thisRigidBody.AddForce(v);
         }
     }
@@ -33,8 +35,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Tree") || collision.gameObject.tag.Equals("Bullet"))
         {
-            DestroyObject(this.gameObject, 0);
-            Debug.Log("You Lost");
+            manager.GetComponent<MenuManager>().CreateMenu();
         }
 
 
