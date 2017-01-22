@@ -12,36 +12,15 @@ public class Scroll : MonoBehaviour {
     public GameObject back3;
     public GameObject back4;
 
-	// Use this for initialization
-	void Start () {
-        var back2_1 = Instantiate(back2);
-        var back2_2 = Instantiate(back2);
-
-        var back3_2 = Instantiate(back2);
-        var back3_1 = Instantiate(back2);
-
-        var back4_1 = Instantiate(back2);
-        var back4_2 = Instantiate(back2);
-
-
-        back2.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-        back2_1.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-        back2_2.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-
-        
-        back3.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-        back3_1.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-        back3_2.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-
-
-        back4.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-        back4_2.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-        back4_1.GetComponent<Rigidbody2D>().AddForce(Vector2.left * b2_speed);
-    }
-
     // Update is called once per frame
-    void Update ()
-    {
+    void Update () {
+        back2.transform.position = back2.transform.position + Vector3.left * b2_speed * Time.deltaTime;
+        back3.transform.position = back3.transform.position + Vector3.left * b3_speed * Time.deltaTime;
+        back4.transform.position = back4.transform.position + Vector3.left * b4_speed * Time.deltaTime;
 
+        if (back2.transform.position.x < -16)
+        {
+            Instantiate(back2, back2.transform.position + Vector3.right * (back2.GetComponent<RectTransform>().sizeDelta.x / 2), new Quaternion(), this.transform);
+        }
     }
 }
