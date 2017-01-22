@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
         freq = thisSoundManager.Frequencia;
         if (freq > threshold)
         {
-            Vector2 v = Vector2.up * speed * Time.deltaTime;
+            Vector2 v = Vector2.up * speed * freq / 10f * Time.deltaTime;
             thisRigidBody.AddForce(v);
         }
     }
