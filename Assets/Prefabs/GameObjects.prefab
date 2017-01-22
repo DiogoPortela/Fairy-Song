@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  b_speed: 100
+  b_speed: 150
   tempoDisparo: 4
   player: {fileID: 1076437998310326}
   bulletSpawnPoint: {fileID: 1414789082905790}
