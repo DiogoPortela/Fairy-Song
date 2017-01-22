@@ -29,7 +29,7 @@ public class dilcos : MonoBehaviour {
         dildo = (GameObject) Instantiate(dildos[rnd], this.transform);
         if(rnd == 0)
         {
-            int alt = Random.Range(0, 1);
+            int alt = Random.Range(0, 2);
             if(alt == 0)
             {
                 dildo.transform.position = new Vector3(12, -3, 1);
