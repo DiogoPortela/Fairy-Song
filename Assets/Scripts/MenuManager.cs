@@ -28,7 +28,7 @@ public class MenuManager : MonoBehaviour {
     { 
         if(menu.activeSelf == true)
         {
-            if (Input.GetKey(KeyCode.A) && done)
+            if (Input.GetKey(KeyCode.D) && done)
             {
                 switch (current)
                 {
@@ -52,7 +52,7 @@ public class MenuManager : MonoBehaviour {
                         }
                 }
             }
-            if (Input.GetKey(KeyCode.D) && done)
+            if (Input.GetKey(KeyCode.A) && done)
             {
                 switch (current)
                 {
