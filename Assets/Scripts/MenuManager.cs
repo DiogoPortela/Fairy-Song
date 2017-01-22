@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour {
     public GameObject start, options, exit;
-    public GameObject leftTarget, rightTarget;
+    public GameObject leftTarget, rightTarget, centerTarget;
     public GameObject level, menu;
+    public GameObject creditos;
     public int transitionSpeed;
     public float Tempo;
 
@@ -83,9 +84,9 @@ public class MenuManager : MonoBehaviour {
                 Transform ouT = GameObject.Find(outFrame).GetComponent<Transform>();
 
                 ouT.position = Vector3.MoveTowards(ouT.position, leftTarget.transform.position, transitionSpeed * Time.deltaTime);
-                to.position = Vector3.MoveTowards(to.position, leftTarget.transform.position, transitionSpeed * Time.deltaTime);
+                to.position = Vector3.MoveTowards(to.position, centerTarget.transform.position, transitionSpeed * Time.deltaTime);
 
-                if (ouT.transform.position.Equals(leftTarget.transform.position))
+                if (to.transform.position.Equals(centerTarget.transform.position))
                 {
                     readyLeft = false;
                     done = true;
@@ -97,19 +98,26 @@ public class MenuManager : MonoBehaviour {
                 Transform ouT = GameObject.Find(outFrame).GetComponent<Transform>();
 
                 ouT.position = Vector3.MoveTowards(ouT.position, rightTarget.transform.position, transitionSpeed * Time.deltaTime);
-                to.position = Vector3.MoveTowards(to.position, rightTarget.transform.position, transitionSpeed * Time.deltaTime);
+                to.position = Vector3.MoveTowards(to.position, centerTarget.transform.position, transitionSpeed * Time.deltaTime);
 
-                if (ouT.transform.position.Equals(rightTarget.transform.position))
+                if (to.transform.position.Equals(centerTarget.transform.position))
                 {
                     readyRight = false;
                     done = true;
-                }
-            }
-        }
+                }                
+            }           
+        }//FIM DA PARTE DO ME
         else if (gameStart)
         {
             Tempo += Time.deltaTime;
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape) && creditos.activeSelf)
+        {
+            creditos.SetActive(false);
+            menu.SetActive(true);
+        }
+
 		
     }
 
@@ -120,6 +128,12 @@ public class MenuManager : MonoBehaviour {
             case "Start":
                 {
                     CreateGame();
+                    break;
+                }
+            case "Credits":
+                {
+                    menu.SetActive(false);
+                    creditos.SetActive(true);
                     break;
                 }
             case "Exit":

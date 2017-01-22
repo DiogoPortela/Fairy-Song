@@ -8,6 +8,7 @@ public class MovementAI : MonoBehaviour {
 
     public float speed;
     public float b_speed;
+    public float tempoDisparo;
     public GameObject player;
     public GameObject bulletSpawnPoint;
     public GameObject bullet;
@@ -64,7 +65,7 @@ public class MovementAI : MonoBehaviour {
     {
         isRunning = true;
         Shoot();
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(tempoDisparo);
         isRunning = false;
     }
 }
